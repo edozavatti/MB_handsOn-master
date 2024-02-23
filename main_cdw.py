@@ -16,7 +16,7 @@ def recursive(d, g):
 
 g = np.linspace(0.1, 5, 50)
 d = []
-with open('data3.dat', 'w') as file:  
+with open('data_cdw.dat', 'w') as file:  
   for i in g:
     d.append(recursive(i+1, i))
     file.write(str(i)+","+str(d[-1])+"\n")
@@ -27,7 +27,7 @@ plt.show()
 
 ############################################################
 
-i3, data3 = np.loadtxt("data3.dat", delimiter=',', unpack=True)
+i3, data3 = np.loadtxt("data_cdw.dat", delimiter=',', unpack=True)
 i2, data2 = np.loadtxt("data2.dat", delimiter=',', unpack=True)
 
 plt.plot(i3,data3, label='CDW')
